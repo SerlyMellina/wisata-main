@@ -31,11 +31,13 @@ class Admin extends CI_Controller
 
         $data['user'] = $this->db->get_where('tb_user', array('email' => $this->session->userdata('email')))->row_array();
         $data['judul'] = 'Dashboard';
-        
+
         $this->load->view('template/header');
         $this->load->view('template/topbar', $data);
         $this->load->view('template/sidebar');
         $this->load->view('Admin/index', $data);
         $this->load->view('template/footer');
+
+        // test coment
     }
 }
