@@ -38,8 +38,8 @@
                 <td>
                   <?php if ($item['status_pembayaran'] == 'pending') : ?>
                     <button type="button" name="button" class="btn btn-warning btn-sm" disabled>Menunggu Pembayaran</button>
-                  <?php elseif ($item['status_pembayaran'] == 'settlement') : ?>
-                    <button type="button" name="button" class="btn btn-success btn-sm" disabled>Selesai</button>
+                  <?php elseif ($item['status_pembayaran'] == 'sukses') : ?>
+                    <button type="button" name="button" class="btn btn-success btn-sm" disabled>sukses</button>
                   <?php elseif ($item['status_pembayaran'] == 'expire') : ?>
                     <button type="button" name="button" class="btn btn-danger btn-sm" disabled>Kadaluarsa</button>
 
@@ -56,7 +56,7 @@
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="<?= base_url('home/verify/') . $item['order_id']  ?>"><i class="fas fa-fw fa-check"></i> Cek Pembayaran</a>
                       </div>
-                    <?php elseif ($item['status_pembayaran'] == 'settlement') : ?>
+                    <?php elseif ($item['status_pembayaran'] == 'sukses') : ?>
                       <a href="<?= base_url('home/detail_pembayaran/') . $item['order_id'] ?>" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Detail Pemesanan">Detail</a>
                     <?php elseif ($item['status_pembayaran'] == 'expire') : ?>
                       <a href="<?= base_url('home/detail_pembayaran/') . $item['order_id'] ?>" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Detail Pemesanan">Detail</a>

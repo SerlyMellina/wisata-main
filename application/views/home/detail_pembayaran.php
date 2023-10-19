@@ -49,7 +49,7 @@
               <td>
                 <?php if ($pembayaran['status_pembayaran'] == 'pending') : ?>
                   <button type="button" name="button" class="btn btn-warning btn-sm" disabled>Menunggu Pembayaran</button>
-                <?php elseif ($pembayaran['status_pembayaran'] == 'settlement') : ?>
+                <?php elseif ($pembayaran['status_pembayaran'] == 'sukses') : ?>
                   <button type="button" name="button" class="btn btn-success btn-sm" disabled>Selesai</button>
                 <?php elseif ($pembayaran['status_pembayaran'] == 'expire') : ?>
                   <button type="button" name="button" class="btn btn-danger btn-sm" disabled>Kadaluarsa</button>
@@ -70,7 +70,7 @@
             </tr>
             <tr>
               <td>Total Bayar</td>
-              <td align="right"><?= 'Rp. ' . number_format($pembayaran['total_bayar'], 0, ',', '.'); ?></td>
+              <td align="left"><?= 'Rp. ' . number_format($pembayaran['total_bayar'], 0, ',', '.'); ?></td>
             </tr>
           </table>
           <a href="<?= base_url('home/pembayaran') ?>" class="btn btn-success">Kembali</a>
