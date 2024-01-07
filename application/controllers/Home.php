@@ -83,12 +83,25 @@ class Home extends CI_Controller
       $this->form_validation->set_rules('no_hp', 'No HP', 'required|trim', ['required' => 'Data tidak boleh kosong']);
       $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required|trim', ['required' => 'Data tidak boleh kosong']);
 
+
+//if dan else adalah struktur kontrol dalam pemprograman yang digunakan untuk mengatur aliran eksekusi 
+//program berdasarkan kondisi yang ditentukan.
+
+
+
       if ($this->form_validation->run() == false) {
         // code...
       $this->load->view('home/template/header');
       $this->load->view('home/template/navbar', $data);
       $this->load->view('home/profile', $data);
       $this->load->view('home/template/footer');
+
+//header=Memuat view (tampilan) dengan nama 'header' yang berada di direktori 'home/template'.
+//navbar=Memuat view dengan nama 'navbar' yang berada di direktori 'home/template', dengan memberikan data `$data` ke view tersebut.
+//profile=Memuat view dengan nama 'profile' yang berada di direktori 'home', dengan memberikan data `$data` ke view tersebut.
+//template=Memuat view dengan nama 'footer' yang berada di direktori 'home/template'.
+
+
     }else {
       $id = $this->input->post('id_pelanggan');
       $nama = $this->input->post('nama_pelanggan');
@@ -96,8 +109,12 @@ class Home extends CI_Controller
       $no_hp = $this->input->post('no_hp');
       $tgl_lahir = $this->input->post('tgl_lahir');
 
+
+//termasuk type data integer= variabel dengan value angka
       $this->db->set('tgl_lahir', $tgl_lahir);
       $this->db->set('alamat', $alamat);
+
+//termasuk type data string= variabel dengan value huruf atau gabungan huruf angka
       $this->db->set('no_hp', $no_hp);
       $this->db->set('nama_pelanggan', $nama);
       $this->db->where('id_pelanggan', $id);
@@ -109,8 +126,11 @@ class Home extends CI_Controller
         redirect('home/index');
     }
 
-    }
+//bagaimana menulis kode program dengan prinsip...?
+//guidelines=membuat komentar
+//bestprctice=mempermudah dalam membaca kodingan, agar kodingan paham sampai mana.
 
+    }
     public function login(){
       if ($this->session->userdata('email')) {
         redirect('user');
@@ -340,6 +360,7 @@ class Home extends CI_Controller
 }
 
 
+
 //2. guidelines = aturan yang dapat digunakan bersamaan dalam hal penamaan, penggunaan komentar dan identasi
 // cara sudah teruji untuk membuat kode program.
 
@@ -392,3 +413,25 @@ class Home extends CI_Controller
 //7. saya menggunakan bootstrap tipenya open source  software karena bisa diedit dan divariasi secara gratis.
 
 
+//5. 1. perbedaan pendekatan, fokus, reusabilitas, pemodelan dunia nyata, pengelompokkan.
+//terstruktur : menggunakan pendekatan prosedural.
+//objek : menggunakan berbasis objek terdiri dari objek2 yg memiliki atribut dan perilaku tertentu.
+
+//terstruktur : lebih fokus ke dalam modul2 terpisah.
+//objek : identifikasi objek2 yg saling berinteraksi untuk mencapai tujuan.
+
+//terstruktur : objek2 sudah ada digunakan kembali dalam proyek2 lain.
+//objek : tidak sefleksibel dlm hal reusabilitas, karna ketergantungan yg erat dlm modul lain.
+
+//terstruktur : mempresentasikan sitem perangkat lunak sesuai dengan struktur dunia nyata.
+//objek : fokus pada algortima.
+
+// terstruktur : kode dan fungsi terkait dikelompokkan bersama dalam satu objek.
+//objek : fungsi2 terkait dikelompokkan dalam modul2 terpisah.
+
+
+
+//Tujuan DPD untuk menggambarkan aliran data suatu sistem, menggunakan simbol seperti kotak untuk proses
+//panah untuk aliran data.
+//UML digunakan untuk memodelkan berbagai aspek sistem seperti struktur, perilaku dan interaksi, menggumakan notasi
+//kompleks seperti kelas, objek.

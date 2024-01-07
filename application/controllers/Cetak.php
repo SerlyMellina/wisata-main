@@ -28,6 +28,8 @@ class Cetak extends CI_Controller
     $bulan = $this->input->post('bulan');
     $tahun = $this->input->post('tahun');
 
+    
+
     $data['query'] = $this->db->query("SELECT `tb_pesanan`.`order_id`, `tb_pelanggan`.`nama_pelanggan`, `tb_pesanan`.`tgl_pesan`,
                        `tb_pesanan`.`bank`, `tb_pesanan`.`total_bayar`
                 FROM tb_pesanan

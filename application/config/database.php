@@ -78,6 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
+//pertanyaan poin 8
 	'database' => 'db_wisata',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
