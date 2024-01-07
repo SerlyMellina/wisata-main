@@ -20,6 +20,15 @@ class Home extends CI_Controller
         $this->session->unset_userdata('role');
       }
 
+  //6. cara membuat class
+  // - awali dengan kata class, kemudian lanjutkan nama_class dgn aturan penamaan huruf capital.
+  // - lalu dilanjutkan dgn tanda {} untuk mengapit definisi dari class.
+
+//   Apa perbedaan hak akses dari tipe data private, protected, public ?
+// ➢ Public berfungsi untuk memberikan akses properti yang dapat diakses dari mana saja
+// ➢ Private berfungsi untuk memberikan akses properti yang hanya dapat diakses dari dalam class tersebut
+// ➢ Protected berfungsi untuk memberikan akses properti yang hanya dapat diakses dari dalam class atau turunannya
+
 
   }
     /**
@@ -190,6 +199,9 @@ class Home extends CI_Controller
           'role' => 2
         ];
 
+        //1. ini bagian string dan integer
+        //integer = value angka. string = value huruf atau gabungan huruf dan angka
+
         $this->db->insert('tb_pelanggan', $data);
         $this->session->set_flashdata('message', '
         <div class="alert alert-success" role="alert">
@@ -307,6 +319,8 @@ class Home extends CI_Controller
       }
     }
 
+    //2. ini penggunaan if else = diguanakan untuk menguji suatu kondisi atau beberapa kondisi secara berurutan
+
     public function batalkan_transaksi($no_pemesanan)
     {
 
@@ -324,3 +338,57 @@ class Home extends CI_Controller
 
 
 }
+
+
+//2. guidelines = aturan yang dapat digunakan bersamaan dalam hal penamaan, penggunaan komentar dan identasi
+// cara sudah teruji untuk membuat kode program.
+
+// best practice mengacu pada seperangkat aturan, metode. contohnya penamaan variable dan fungsi, komentar dan dokumentasi.
+
+//3. debugging
+//- identifikasi error dan mengumpulkan Error
+//- menemukan lokasi bug melalui tampilan problem pada text editor atau browser.
+//- analisis error.
+//-lakukan debugging.
+//- perbaiki dan validasi.
+
+//4. kode program agar dipahami oleh semua pihak
+//- tulis code dengan simple
+//- konsisten (penamaan variable-case sensitive)
+//- membuat komentar pada baris coding
+//- membuat dokumentasi (paper)
+
+//5. -perbedaan perangkat lunak secara berstruktur dan pengembangan pernagkat lunak berorientasi objek ?
+// Pendekatan Dasar:
+
+// Pengembangan Terstruktur: Pendekatan terstruktur berfokus pada pemisahan program menjadi modul atau fungsi-fungsi yang independen. Setiap modul memiliki tugas dan tanggung jawab tertentu. Pengembangan terstruktur seringkali berpusat pada prosedur-prosedur yang dijalankan berurutan.
+// Pengembangan Berorientasi Objek: Pendekatan berorientasi objek berfokus pada pemodelan perangkat lunak sebagai kumpulan objek yang memiliki atribut dan metode. Objek adalah instance dari kelas, yang mendefinisikan struktur dan perilaku objek tersebut. OOP lebih berfokus pada konsep entitas yang saling berinteraksi.
+
+// Abstraksi:
+
+// Pengembangan Terstruktur: Abstraksi dalam pengembangan terstruktur biasanya lebih sederhana daripada OOP. Modul atau fungsi digunakan untuk mengabstraksi logika tertentu.
+// Pengembangan Berorientasi Objek: Abstraksi dalam OOP lebih tinggi karena objek menggambarkan entitas nyata atau konsep dalam domain masalah yang sedang dipecahkan. Konsep ini lebih dekat dengan pemahaman manusia tentang dunia nyata.
+
+// Penggunaan Variabel:
+
+// Pengembangan Terstruktur: Penggunaan variabel adalah bagian penting dari pengembangan terstruktur, tetapi variabel tersebut umumnya bersifat global atau lokal dalam ruang lingkup modul.
+// Pengembangan Berorientasi Objek: Variabel biasanya terkait dengan atribut objek dan dikelola dalam konteks objek tersebut.
+
+//-perbedaan data flow diagram dan unified modelling language
+
+// Tujuan Utama:
+// Data Flow Diagram (DFD): DFD adalah alat yang digunakan untuk menggambarkan aliran data dalam sistem. Tujuan utamanya adalah untuk menggambarkan bagaimana data mengalir dari satu proses ke proses lain dalam sistem, serta bagaimana data tersebut disimpan atau digunakan oleh entitas eksternal.
+// Unified Modeling Language (UML): UML adalah bahasa pemodelan yang lebih komprehensif. Tujuannya mencakup pemodelan berbagai aspek sistem, termasuk struktur kelas, perilaku, interaksi antara objek, dan banyak aspek lainnya selain aliran data.
+
+// Fokus Pemodelan:
+// Data Flow Diagram (DFD): DFD fokus pada pemodelan aliran data dan proses dalam sistem. DFD tidak terlalu memperhatikan aspek seperti struktur kelas atau urutan waktu.
+// Unified Modeling Language (UML): UML menyediakan berbagai jenis diagram, termasuk diagram kelas (untuk pemodelan struktur kelas), diagram urutan (untuk pemodelan interaksi antara objek dalam waktu), dan banyak lagi. UML mencakup berbagai aspek dalam pengembangan perangkat lunak.
+
+// Notasi:
+// Data Flow Diagram (DFD): DFD menggunakan notasi yang relatif sederhana, seperti panah untuk menggambarkan aliran data, lingkaran untuk proses, dan kotak untuk penyimpanan data.
+// Unified Modeling Language (UML): UML memiliki notasi yang lebih kaya dan kompleks, termasuk ikon khusus untuk berbagai jenis elemen, seperti kelas, objek, relasi, dan sebagainya.
+
+
+//7. saya menggunakan bootstrap tipenya open source  software karena bisa diedit dan divariasi secara gratis.
+
+

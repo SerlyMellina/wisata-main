@@ -94,3 +94,20 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+// 8. adalah penjelasan setiap elemen:
+// 'dsn' adalah Data Source Name (DSN) jika Anda ingin menggunakan DSN untuk koneksi, tetapi dalam contoh ini kosong.
+// 'hostname' adalah lokasi dari server basis data. Dalam kasus ini, server basis data berada di 'localhost', yang berarti server MySQL berjalan di komputer yang sama dengan aplikasi CodeIgniter.
+// 'username' adalah nama pengguna untuk mengakses basis data. Dalam contoh ini, nama pengguna adalah 'root'.
+// 'password' adalah kata sandi untuk mengakses basis data. Dalam contoh ini, tidak ada kata sandi.
+// 'database' adalah nama basis data yang akan digunakan. Dalam contoh ini, basis data yang digunakan adalah 'db_wisata'.
+// 'dbdriver' adalah driver basis data yang digunakan. Dalam contoh ini, driver 'mysqli' digunakan, yang sesuai dengan MySQL.
+// 'dbprefix' adalah awalan tabel yang akan digunakan jika Anda ingin memberikan prefiks pada tabel basis data. Dalam contoh ini, tidak ada awalan yang digunakan.
+// 'pconnect' adalah opsi untuk mengaktifkan atau menonaktifkan persistent connections. Dalam contoh ini, persistent connections dinonaktifkan (FALSE).
+// 'db_debug' adalah opsi yang menentukan apakah mode debugging basis data aktif. Ini biasanya diatur ke TRUE dalam mode pengembangan (ketika ENVIRONMENT tidak sama dengan 'production') dan FALSE dalam mode produksi.
+
+// 'cache_on' adalah opsi yang menentukan apakah caching basis data diaktifkan. Dalam contoh ini, caching dinonaktifkan (FALSE).
+// 'cachedir' adalah direktori tempat cache basis data akan disimpan jika caching diaktifkan. Dalam contoh ini, direktori cache kosong.
+// 'char_set' dan 'dbcollat' mengatur pengkodean karakter dan kolasi untuk basis data, dalam contoh ini, pengkodean karakter diatur ke 'utf8' dan kolasi ke 'utf8_general_ci'.
+// 'swap_pre', 'encrypt', 'compress', 'stricton', 'failover', dan 'save_queries' adalah pengaturan tambahan untuk penggunaan koneksi basis data yang lebih canggih. Dalam contoh ini, pengaturan ini memiliki nilai default
+
